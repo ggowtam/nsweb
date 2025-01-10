@@ -66,10 +66,7 @@ const Services = () => {
       <div style={{ marginTop: '20px' }}></div>
 
       <div>
-        <Parallax className="parallax-container" bgImage={parallaxImage1} strength={500}>
-          <div style={{ height: '300px' }}></div>
-        </Parallax>
-        <div
+      <div
           className="mobile-parallax"
           style={{
             backgroundImage: `url(${mobileParallaxImage})`,
@@ -80,6 +77,10 @@ const Services = () => {
             backgroundAttachment: window.innerWidth <= 768 ? 'fixed' : 'scroll'  // Apply parallax effect only on mobile
           }}
         ></div>
+        <Parallax className="parallax-container" bgImage={parallaxImage1} strength={500}>
+          <div style={{ height: '300px' }}></div>
+        </Parallax>
+    
       </div>
     </div>
   );

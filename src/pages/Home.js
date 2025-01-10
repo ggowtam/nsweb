@@ -127,6 +127,10 @@ const Home = () => {
 
       {/* Conditional Rendering for Parallax */}
       {!isMobile ? (
+
+
+
+
         <Parallax className="parallax-container" bgImage={parallaxImage1} strength={500}>
           <div style={{ height: '300px' }}></div>
         </Parallax>
