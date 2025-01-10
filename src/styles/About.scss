@@ -195,10 +195,5 @@
     display: none; /* Hide desktop parallax on mobile */
   }
 
-  .mobile-parallax {
-    display: block; /* Show mobile parallax on mobile */
-    background-size: cover;
-    background-attachment: fixed; /* Optional for parallax effect */
-    height: 300px; /* Adjust as needed */
-  }
+
 }

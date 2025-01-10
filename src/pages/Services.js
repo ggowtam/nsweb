@@ -76,6 +76,8 @@ const Services = () => {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             height: '700px',
+            display: window.innerWidth <= 768 ? 'block' : 'none',  // Show on mobile, hide on desktop
+            backgroundAttachment: window.innerWidth <= 768 ? 'fixed' : 'scroll'  // Apply parallax effect only on mobile
           }}
         ></div>
       </div>
