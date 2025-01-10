@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.67241f09.css",
-    "main.js": "/static/js/main.39fa3670.js",
+    "main.css": "/static/css/main.575fa7b3.css",
+    "main.js": "/static/js/main.4a4283da.js",
     "static/js/453.e0afee97.chunk.js": "/static/js/453.e0afee97.chunk.js",
     "static/media/cinematic film.webm": "/static/media/cinematic film.ccb0030c85c1effbea0e.webm",
     "static/media/preset1.jpg": "/static/media/preset1.843a38672f4310f40998.jpg",
@@ -27,9 +27,11 @@
     "static/media/para2.jpg": "/static/media/para2.7decb2af83ff99b5214e.jpg",
     "static/media/para3.jpg": "/static/media/para3.7213761976f55121f57b.jpg",
     "static/media/wed11.jpg": "/static/media/wed11.684dfb72b6e8841996f2.jpg",
+    "static/media/mobilepa.jpg": "/static/media/mobilepa.9911a8e99b51ab63a00a.jpg",
     "static/media/Prew6.jpg": "/static/media/Prew6.4838729b53ae9273b0a8.jpg",
     "static/media/wed2.jpg": "/static/media/wed2.99cde8d5aad6e36c17c2.jpg",
     "static/media/pre109.jpg": "/static/media/pre109.bc25d7524113a4926a22.jpg",
+    "static/media/mobilep.jpg": "/static/media/mobilep.d7320c9b7f2c8eea1874.jpg",
     "static/media/pre94.jpg": "/static/media/pre94.3316284dc52853ff71a0.jpg",
     "static/media/wed9.jpg": "/static/media/wed9.f3bffdd01b352bc5caae.jpg",
     "static/media/wed10.jpg": "/static/media/wed10.a44ac99afab386dcf1ac.jpg",
@@ -229,6 +231,7 @@
     "static/media/Event46.jpg": "/static/media/Event46.8f332b559511b9da4a39.jpg",
     "static/media/Event35.jpg": "/static/media/Event35.5ba0a96e755bcf4a10b1.jpg",
     "static/media/corporatephoto.jpg": "/static/media/corporatephoto.d679b3395f6aabff5358.jpg",
+    "static/media/mobileps.jpg": "/static/media/mobileps.39fd6cd1b279ab15b244.jpg",
     "static/media/pre45.jpg": "/static/media/pre45.a033dcf112966244ebc4.jpg",
     "static/media/pre22.jpg": "/static/media/pre22.0b1ea97a800b10c5f4ec.jpg",
     "static/media/pre44.jpg": "/static/media/pre44.0f5efe36c114a376ffa5.jpg",
@@ -281,12 +284,12 @@
     "static/media/Others.png": "/static/media/Others.ccd12ff6a4e5a801a345.png",
     "static/media/cart-icon.png": "/static/media/cart-icon.c4ec7c97c548574d4960.png",
     "index.html": "/index.html",
-    "main.67241f09.css.map": "/static/css/main.67241f09.css.map",
-    "main.39fa3670.js.map": "/static/js/main.39fa3670.js.map",
+    "main.575fa7b3.css.map": "/static/css/main.575fa7b3.css.map",
+    "main.4a4283da.js.map": "/static/js/main.4a4283da.js.map",
     "453.e0afee97.chunk.js.map": "/static/js/453.e0afee97.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.67241f09.css",
-    "static/js/main.39fa3670.js"
+    "static/css/main.575fa7b3.css",
+    "static/js/main.4a4283da.js"
   ]
 }
