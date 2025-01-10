@@ -66,7 +66,7 @@ const Services = () => {
       <div style={{ marginTop: '20px' }}></div>
 
       <div>
-      <div
+            <div
           className="mobile-parallax"
           style={{
             backgroundImage: `url(${mobileParallaxImage})`,

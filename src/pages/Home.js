@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import videoSrc from '../assets/cinematic film.webm'; // Updated video source to .webm format
 import { Parallax } from 'react-parallax';
 import parallaxImage1 from '../assets/para3.jpg';
@@ -25,7 +25,7 @@ import rightImage from '../assets/preset6.jpg';
 const Home = () => {
   const videoRef = useRef(null);
   const scrollHandlerRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,20 +37,15 @@ const Home = () => {
       }
     };
 
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
-    };
+
 
     scrollHandlerRef.current = handleScroll;
     window.addEventListener('scroll', scrollHandlerRef.current);
-    window.addEventListener('resize', checkMobile);
 
-    // Initial checks
-    checkMobile();
+
 
     return () => {
       window.removeEventListener('scroll', scrollHandlerRef.current);
-      window.removeEventListener('resize', checkMobile);
     };
   }, []);
 
@@ -125,30 +120,15 @@ const Home = () => {
         />
       </div>
 
-      {/* Conditional Rendering for Parallax */}
-      {!isMobile ? (
-
-
-
-
+      <div>
         <Parallax className="parallax-container" bgImage={parallaxImage1} strength={500}>
           <div style={{ height: '300px' }}></div>
         </Parallax>
-      ) : (
-        <div
-          className="mobile-parallax"
 
-          style={{
-            backgroundImage: `url(${mobileParallaxImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            height: '700px',
-            display: window.innerWidth <= 768 ? 'block' : 'none',  // Show on mobile, hide on desktop
-            backgroundAttachment: window.innerWidth <= 768 ? 'fixed' : 'scroll'  // Apply parallax effect only on mobile
-          }}
-          
-        ></div>
-      )}
+        {/* Mobile-Specific Parallax */}
+      
+      </div>
+    
     </div>
   );
 };

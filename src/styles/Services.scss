@@ -117,17 +117,16 @@ $transition-speed: 0.3s;
     }
   }
 }
-.mobile-parallax {
-  display: none; 
-}
+
 
 @media screen and (max-width: 768px) {
   .parallax-container {
-    display: none; /* Hide desktop parallax on mobile */
+    display: block; /* Show mobile parallax on mobile */
+    background-size: cover;
+    background-attachment: fixed; /* Optional for parallax effect */
+    height: 700px; /* Adjust as needed */
   }
-
 }
-
 // Responsive design adjustments
 @media (max-width: 768px) {
   .services-container {

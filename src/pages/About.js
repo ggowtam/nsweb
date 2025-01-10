@@ -28,34 +28,8 @@ const About = () => (
         </div>
       </div>
     </Parallax>
-    <div
-          className="mobile-parallax"
-          style={{
-            backgroundImage: `url(${mobileParallaxImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            height: '700px',
-            display: window.innerWidth <= 768 ? 'block' : 'none',  // Show on mobile, hide on desktop
-            backgroundAttachment: window.innerWidth <= 768 ? 'fixed' : 'scroll'  // Apply parallax effect only on mobile
-          }}
-          
-        >
-              <div className="about-contentm">
-        <div className="about-textm">
-          <h3>
-            We are a team of authentic filmmakers and <br/>
-            photographers here to capture your special <br/>
-            moments in the utmost raw and authentic way
-          </h3>
-          <h4>
-            Capturing the essence of the moment itself and projecting it <br/>
-            through the timeless medium of visuals and sound for you to <br/>
-            reminisce some of life’s most monumental moments
-          </h4>
-          <Link to="/services" className="view-collection-btn">View the Collection</Link>
-        </div>
-      </div>
-        </div>
+   
+  
     </div>
     <div className="white-block">
       <div className="centered-text">
