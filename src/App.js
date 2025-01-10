@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { CartProvider } from './context/CartContext';
 
@@ -57,6 +57,13 @@ function App() {
   const toggleCart = () => {
     setCartOpen(prev => !prev);
   };
+  const location = useLocation();
+
+  useEffect(() => {
+    window.gtag('event', 'page_view', {
+      page_path: location.pathname,
+    });
+  }, [location]);
 
   return (
     <div>
