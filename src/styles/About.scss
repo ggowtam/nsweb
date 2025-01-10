@@ -1,6 +1,7 @@
 /* src/styles/About.scss */
 
 
+
 .about-content {
   width: 100%;
   padding-right: 5%;
@@ -119,9 +120,7 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  .parallax-container {
-    height: 600px; /* Adjust height for smaller screens */
-  }
+
 
   .about-text h3,
   .about-text p {
@@ -155,9 +154,6 @@
 
 /* 4K Screen Styles */
 @media (min-width: 2560px) {
-  .parallax-container {
-    height: 1600px; /* Increase height for large screens */
-  }
 
   .about-text h3 {
     font-size: 2.5em; /* Larger font size */

@@ -15,13 +15,7 @@ $transition-speed: 0.3s;
   padding: 0;
   box-sizing: border-box;
 }
-.parallax-container {
-  height: 1000px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
+
 .services-container {
   padding: 50px;
   padding-top: 100px; // Adjust this value to create more space at the top
@@ -133,7 +127,7 @@ $transition-speed: 0.3s;
   }
 
   .mobile-parallax {
-    display: block; /* Show mobile parallax on mobile */
+    display: block;
     background-image: url('../assets/mobilep.jpg'); /* Replace with your mobile image path */
     background-size: cover;
     background-attachment: fixed; /* Optional for parallax effect */
