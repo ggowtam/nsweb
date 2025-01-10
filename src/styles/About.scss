@@ -1,12 +1,5 @@
 /* src/styles/About.scss */
 
-.parallax-container {
-  height: 1000px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
 
 .about-content {
   width: 100%;
@@ -195,5 +188,22 @@
       width: 500px; /* Increase image size */
       margin: 0 20px; /* Adjust margins */
     }
+  }
+}
+
+.mobile-parallax {
+  display: none; 
+}
+@media screen and (max-width: 768px) {
+  .parallax-container {
+    display: none; /* Hide desktop parallax on mobile */
+  }
+
+  .mobile-parallax {
+    display: block; /* Show mobile parallax on mobile */
+    background-image: url('../assets/mobilep.jpg'); /* Replace with your mobile image path */
+    background-size: cover;
+    background-attachment: fixed; /* Optional for parallax effect */
+    height: 300px; /* Adjust as needed */
   }
 }

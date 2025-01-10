@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Parallax } from 'react-parallax';
 import parallaxImage1 from '../assets/para1.jpg';
-import mobileParallaxImage from '../assets/mobileps.jpg'; // Added mobile-specific image
+import mobileParallaxImage from '../assets/mobileps.jpg'; 
 import '../styles/Services.scss';
 import Homepic from '../assets/Homepic.jpg';
 import pre3 from '../assets/pre1/pre3.jpg';
