@@ -124,6 +124,24 @@ $transition-speed: 0.3s;
   }
 }
 
+.mobile-parallax {
+  display: none; /* Hide mobile parallax by default */
+}
+
+@media screen and (max-width: 768px) {
+  .parallax-container {
+    display: none; /* Hide desktop parallax on mobile */
+  }
+
+  .mobile-parallax {
+    display: block; /* Show mobile parallax on mobile */
+    background-image: url('../assets/mobilep.jpg'); /* Replace with your mobile image path */
+    background-size: cover;
+    background-attachment: fixed; /* Optional for parallax effect */
+    height: 300px; /* Adjust as needed */
+  }
+}
+
 // Responsive design adjustments
 @media (max-width: 768px) {
   .services-container {

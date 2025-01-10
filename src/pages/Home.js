@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import videoSrc from '../assets/cinematic film.webm'; // Updated video source to .webm format
 import { Parallax } from 'react-parallax';
 import parallaxImage1 from '../assets/para3.jpg';
+import mobileParallaxImage from '../assets/mobilep.jpg'; // Mobile-specific image
 import logo2 from '../assets/logo2.png';
 
 import Home2 from '../assets/Home2.jpg';
@@ -24,6 +25,7 @@ import rightImage from '../assets/preset6.jpg';
 const Home = () => {
   const videoRef = useRef(null);
   const scrollHandlerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,25 +37,33 @@ const Home = () => {
       }
     };
 
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+    };
+
     scrollHandlerRef.current = handleScroll;
     window.addEventListener('scroll', scrollHandlerRef.current);
+    window.addEventListener('resize', checkMobile);
+
+    // Initial checks
+    checkMobile();
 
     return () => {
       window.removeEventListener('scroll', scrollHandlerRef.current);
+      window.removeEventListener('resize', checkMobile);
     };
   }, []);
 
   return (
     <div>
       <div className="home-container">
-        <video ref={videoRef} autoPlay loop muted playsInline  className="video-background">
+        <video ref={videoRef} autoPlay loop muted playsInline className="video-background">
           <source src={videoSrc} type="video/webm" /> {/* Ensure format compatibility */}
           Your browser does not support the video tag.
         </video>
         <div className="overlay-content">
           <h1>THE N.S.CREATION FILMS</h1>
         </div>
-      
       </div>
 
       <div className="content-container">
@@ -113,11 +123,24 @@ const Home = () => {
           leftImageSrc={leftImage}
           rightImageSrc={rightImage}
         />
-
-    
       </div>
-      <Parallax className="parallax-container" bgImage={parallaxImage1} strength={500}>
-    </Parallax>
+
+      {/* Conditional Rendering for Parallax */}
+      {!isMobile ? (
+        <Parallax className="parallax-container" bgImage={parallaxImage1} strength={500}>
+          <div style={{ height: '300px' }}></div>
+        </Parallax>
+      ) : (
+        <div
+          className="mobile-parallax"
+          style={{
+            backgroundImage: `url(${mobileParallaxImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            height: '700px',
+          }}
+        ></div>
+      )}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Parallax } from 'react-parallax';
+import mobileParallaxImage from '../assets/mobilepa.jpg'; 
 import parallaxImage1 from '../assets/para2.jpg';
 import presetImage1 from '../assets/Home19.jpg';
 import presetImage2 from '../assets/Home14.jpg';
@@ -9,6 +10,7 @@ import '../styles/About.scss';
 
 const About = () => (
   <>
+  <div>
     <Parallax className="parallax-container" bgImage={parallaxImage1} strength={500}>
       <div className="about-content">
         <div className="about-text">
@@ -26,6 +28,33 @@ const About = () => (
         </div>
       </div>
     </Parallax>
+    <div
+          className="mobile-parallax"
+          style={{
+            backgroundImage: `url(${mobileParallaxImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            height: '700px',
+          }}
+          
+        >
+              <div className="about-contentm">
+        <div className="about-textm">
+          <h3>
+            We are a team of authentic filmmakers and <br/>
+            photographers here to capture your special <br/>
+            moments in the utmost raw and authentic way
+          </h3>
+          <h4>
+            Capturing the essence of the moment itself and projecting it <br/>
+            through the timeless medium of visuals and sound for you to <br/>
+            reminisce some of life’s most monumental moments
+          </h4>
+          <Link to="/services" className="view-collection-btn">View the Collection</Link>
+        </div>
+      </div>
+        </div>
+    </div>
     <div className="white-block">
       <div className="centered-text">
         <strong>We draw on contemporary influences while staying</strong><br/>

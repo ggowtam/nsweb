@@ -234,6 +234,25 @@
   grid-column: 6 / 7;
   grid-row: span -4;
 }
+
+
+
+/* Media query for mobile */
+@media screen and (max-width: 768px) {
+  .parallax-container {
+    display: none; /* Hide desktop parallax on mobile */
+  }
+
+  .mobile-parallax {
+    display: block; /* Show mobile parallax on mobile */
+    background-image: url('../assets/mobilep.jpg'); /* Replace with your mobile image path */
+    background-size: cover;
+    background-attachment: fixed; /* Optional for parallax effect */
+    height: 300px; /* Adjust as needed */
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   .content-container {
     flex-direction: column; /* Stack elements vertically */

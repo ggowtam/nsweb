@@ -45,6 +45,52 @@
   }
 }
 
+.about-contentm {
+  width: 100%;
+  padding: 5%;
+  padding-top: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-textm {
+  color: rgb(0, 0, 0);
+  text-align: left;
+  max-width: 350px;
+
+  h3 {
+    display: block;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }  
+  h4 {
+    display: block;
+    font-size: 0.8em;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+
+  .view-collection-btn {
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+    display: inline-block;
+    background: transparent;
+    transition: background 0.3s, color 0.3s;
+
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+}
+
+
 .white-block {
   background-color: #ffffff;
   padding: 50px 20px;
