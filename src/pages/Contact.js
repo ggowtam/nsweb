@@ -122,6 +122,19 @@ const Contact = () => {
             errors={state.errors}
           />
         </div>
+        <div className="form-group">
+  <label htmlFor="phoneNumber" className="phone-label">
+    Prefer to call us? Reach out at:
+  </label>
+  <input
+    type="text"
+    id="phoneNumber"
+    name="phoneNumber"
+    value="+1 (919) 945-6880"
+    readOnly
+    className="phone-input"
+  />
+</div>
         <button type="submit" disabled={state.submitting}>
           Send
         </button>
