@@ -17,7 +17,7 @@ const Contact = () => {
         <h2 className="header-text">LET'S WORK TOGETHER</h2>
       </div>
       <p className="contact-info">
-        Please fill the contact form below. For all other inquiries, please email us at <a href="mailto:thenscreationfilms@gmail.com">thenscreationfilms@gmail.com</a>
+        Please fill the contact form below. For all other inquiries, please email us at <a href="mailto:thenscreationfilms@gmail.com">Info@thensfilms.com</a>
       </p>
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
