@@ -42,6 +42,16 @@
     
       gtag('config', 'G-DB1Y1HFE0C');
     </script>
+    <script type="text/javascript">
+      // GitHub Pages redirect workaround for React Router
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <title>The N.S.Creation films</title>
   </head>
   <body>

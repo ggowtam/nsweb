@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { CartProvider } from './context/CartContext';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; 
+import { Routes, Route, useLocation } from 'react-router-dom'; 
 
 import Home from './pages/Home';
 import About from './pages/About';
