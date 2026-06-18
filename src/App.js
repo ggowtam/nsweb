@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { CartProvider } from './context/CartContext';
-import { Routes, Route, useLocation } from 'react-router-dom'; 
+import { Routes, Route, useLocation, useNavigate, useSearchParams } from 'react-router-dom'; 
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -54,11 +54,76 @@ import SlideOutCart from './components/SlideOutCart';
 function App() {
 
   const [isCartOpen, setCartOpen] = useState(false);
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleCart = () => {
     setCartOpen(prev => !prev);
   };
-  const location = useLocation();
+
+  // Handle redirect query parameter
+  useEffect(() => {
+    const redirect = searchParams.get('redirect');
+    if (redirect) {
+      // Map redirect values to route paths
+      const redirectMap = {
+        // Services pages
+        'cinematicFilms': '/services/cinematicFilms',
+        'weddings': '/services/weddings',
+        'prePostWeddings': '/services/pre-post-weddings',
+        'eventCoverage': '/services/event-coverage',
+        'adFilms': '/services/ad-films',
+        'fashionShoots': '/services/fashion-shoots',
+        'others': '/services/others',
+        
+        // Main pages
+        'about': '/about',
+        'services': '/services',
+        'presets': '/presets',
+        'contact': '/contact',
+        'recentWork': '/recent-work',
+        'education': '/education',
+        'book': '/book',
+        'checkout': '/checkout',
+        'thankYou': '/thank-you',
+        
+        // Wedding detail pages
+        'wed1': '/weddings/Wed1',
+        'wed2': '/weddings/Wed2',
+        
+        // Pre-wedding detail pages
+        'preWedding1': '/preweddings/pre-wedding-shoot-1',
+        'preWedding2': '/preweddings/pre-wedding-shoot-2',
+        'preWedding3': '/preweddings/pre-wedding-shoot-3',
+        'preWedding4': '/preweddings/pre-wedding-shoot-4',
+        'preWedding5': '/preweddings/pre-wedding-shoot-5',
+        
+        // Fashion detail pages
+        'fashion1': '/fashion/fashion-shoot-1',
+        'fashion2': '/fashion/fashion-shoot-2',
+        'fashion3': '/fashion/fashion-shoot-3',
+        
+        // Event detail pages
+        'event1': '/events/event1',
+        'event2': '/events/event2',
+        'event3': '/events/event3',
+        
+        // Preset detail pages
+        'stoic': '/full-item/stoic-pack',
+        'regal': '/full-item/regal-tones',
+        'earthy': '/full-item/earthy-tone',
+        'soul': '/full-item/soul-tone',
+        'filmpack': '/full-item/film-pack',
+        'awaken': '/full-item/awaken',
+      };
+
+      const targetPath = redirectMap[redirect];
+      if (targetPath && location.pathname === '/') {
+        navigate(targetPath, { replace: true });
+      }
+    }
+  }, [searchParams, navigate, location.pathname]);
 
   useEffect(() => {
     window.gtag('event', 'page_view', {
