@@ -9,6 +9,7 @@ import Book from './pages/Book';
 import Contact from './pages/Contact';
 import Education from './pages/Education';
 import Presets from './pages/Presets';
+import RecentWork from './pages/RecentWork';
 import StoicPreset from './pages/StoicPreset';
 import RegalPreset from './pages/RegalPreset';
 import EarthyPreset from './pages/EarthyPreset';
@@ -78,6 +79,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/education" element={<Education />} />
         <Route path="/presets" element={<Presets />} />
+        <Route path="/recent-work" element={<RecentWork />} />
         <Route path="/full-item/stoic-pack" element={<StoicPreset />} />
           <Route path="/full-item/regal-tones" element={<RegalPreset />} />
           <Route path="/full-item/earthy-tone" element={<EarthyPreset />} />

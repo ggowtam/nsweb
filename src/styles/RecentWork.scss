@@ -1,0 +1,29 @@
+.recent-work-page {
+  padding: 50px 16px;
+  padding-top: 100px; /* match Services.scss top spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+.recent-title {
+  font-family: 'Nanum Myeongjo', Arial, sans-serif; /* match Services.scss title font */
+  font-size: 2.5rem;
+  margin: 18px 0 12px; /* a little below header level */
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.behold-container {
+  width: 942px; /* match suggested widget width */
+  max-width: 100%;
+  margin: 0 auto 40px;
+}
+
+.recent-fallback {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+}

@@ -77,6 +77,19 @@ const Header = () => {
         </div>
         <Link to="/about" onClick={handleLinkClick}>About</Link>
         <Link to="/contact" onClick={handleLinkClick}>Contact</Link>
+
+        <a
+          href="https://gallery.thenscreationfilms.com"
+          className="gallery-button"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleLinkClick}
+        >
+          Gallery
+        </a>
+
+        <Link to="/recent-work" className="recent-work-button" onClick={handleLinkClick}>Recent Work</Link>
+
         <Link to="/book" className="book-button" onClick={handleLinkClick}>Book Appointment</Link>
 
         {/* Social icons for mobile menu */}
