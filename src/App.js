@@ -119,7 +119,8 @@ function App() {
       };
 
       const targetPath = redirectMap[redirect];
-      if (targetPath && location.pathname === '/') {
+      // Navigate if redirect is valid and we're not already at that path
+      if (targetPath && location.pathname !== targetPath) {
         navigate(targetPath, { replace: true });
       }
     }
